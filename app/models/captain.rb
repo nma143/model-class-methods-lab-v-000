@@ -6,5 +6,4 @@ class Captain < ActiveRecord::Base
     includes(boats: :classifications).where(classifications: {name: "Catamaran"})
   end
 
-
 end
