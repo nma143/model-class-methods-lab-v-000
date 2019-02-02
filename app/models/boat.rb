@@ -4,7 +4,8 @@ class Boat < ActiveRecord::Base
   has_many    :classifications, through: :boat_classifications
 
   def self.first_five
-    self.first(5)  
+    self.first(5)
+    binding.pry  
   end
 
 end
