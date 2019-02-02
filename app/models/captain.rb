@@ -15,7 +15,7 @@ class Captain < ActiveRecord::Base
   end
 
   def self.talented_seafarers
-    id_list = self.sailors.pluck(:id) + self.motorboatists.pluck(:id)
+    id_list = self.sailors.pluck(:id) & self.motorboatists.pluck(:id)
     self.where("id IN (?)", id_list)
   end
 
